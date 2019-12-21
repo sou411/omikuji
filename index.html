@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="omikuji.css" />
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
+    crossorigin="anonymous"></script> <!--jQueryをCDNから取得-->
+    <script type="text/javascript" src="turn.js"></script>
+</head>
+<body>
+    <p1 id="title">今日の運勢</p1>
+    <h1><input type="button" id="button" value="運勢を見る" onclick="result()"></h1>
+    <img src="torii.png" class="torii">
+  
+  <div class="flipbook">
+    <div class="hard"><p id="unsei">運勢を見る</p><h2 class="ribbona">a</h2><h3 class="ribbonb">b</h3></div>
+    <div class="content"><p id="result"></p><img src="2.png" id="img2"><img src="3.png" id="img3"></div>
+    <div class="content"><p id="resultdetail"></p></div>
+    <div class="hard"><h4 class="ribbona">a</h4><h5 class="ribbonb">b</h5></div>
+  </div>
+</body>
+<script type="text/javascript">
+  $(".flipbook").turn({
+    autoCenter: true,
+    width:250,
+    height:150
+  });
+
+  $("h1").click(function(){
+    $("div").fadeIn(1000);
+  });
+  $("h1").click(function(){
+    $("h1").hide();
+  });
+  $("h1").click(function(){
+    $("p1").hide();
+  });
+  </script>
+<script src="omikuji.js"></script>
+</html>
